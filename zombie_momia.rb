@@ -1,11 +1,7 @@
 class Zombie_momia < Zombie
 def initialize(x, y)
-    @x = x
-    @y = y
-    @directions = ["left", "right", "up", "down"]
-    @direction = "right"
+    super
     @image = Gosu::Image.new("zombie_momia.png")
-    @steps = 0
   end
   def walk
     if @direction == "right"
