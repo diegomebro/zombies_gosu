@@ -1,6 +1,6 @@
 require 'gosu'
 require_relative 'zombie'
-
+require_relative 'zombie_momia'
 class MyWindow < Gosu::Window
   def initialize
     super(900, 700)
@@ -10,6 +10,7 @@ class MyWindow < Gosu::Window
       coords = line.split(",")
       coords.map!(&:to_i)
       @zombies << Zombie.new(coords[0], coords[1])
+      @zombies << Zombie_momia.new(coords[0], coords[1])
     end
   end
 
